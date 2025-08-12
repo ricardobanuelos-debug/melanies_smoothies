@@ -46,3 +46,7 @@ if ingredients_list:
 else:
     st.info("Pick up to 5 ingredients to continue.")
 
+# New section to display smoothiefroot nutrition information
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
